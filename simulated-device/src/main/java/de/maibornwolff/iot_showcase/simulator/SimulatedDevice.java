@@ -27,10 +27,11 @@ public class SimulatedDevice {
 
   // Specify the telemetry to send to your IoT hub.
   private static class TelemetryDataPoint {
+    public String sessionID;
+    public String deviceID;
     public double deviceCoordinateX;
     public double deviceCoordinateY;
     public double deviceCoordinateZ;
-    public String deviceID;
     //maybe
     public String timestamp;
 
@@ -70,10 +71,11 @@ public class SimulatedDevice {
           double currentDeviceCoordinateY = minDeviceCoordinateY + rand.nextDouble() * 15;
           double currentDeviceCoordinateZ = minDeviceCoordinateZ + rand.nextDouble() * 15;
           TelemetryDataPoint telemetryDataPoint = new TelemetryDataPoint();
+          telemetryDataPoint.sessionID = "s-id"+rand.nextInt();
+          telemetryDataPoint.deviceID = "d-id"+rand.nextInt();
           telemetryDataPoint.deviceCoordinateX = currentDeviceCoordinateX;
           telemetryDataPoint.deviceCoordinateY = currentDeviceCoordinateY;
           telemetryDataPoint.deviceCoordinateZ = currentDeviceCoordinateZ;
-          telemetryDataPoint.deviceID = "id"+rand.nextInt();
           telemetryDataPoint.timestamp = "ddmmyyyy";
 
           // Add the telemetry to the message body as JSON.
@@ -95,7 +97,8 @@ public class SimulatedDevice {
           synchronized (lockobj) {
             lockobj.wait();
           }
-          Thread.sleep(1000);
+          //alle 30 Sekunden
+          Thread.sleep(30000);
         }
       } catch (InterruptedException e) {
         System.out.println("Finished.");
