@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/webpage/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/webpage/README.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/webpage/babel.config.js" afterDir="false" />
@@ -16,12 +18,6 @@
       <change afterPath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/webpage/src/main.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/webpage/webpage.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulated-device/src/main/java/de/maibornwolff/iot_showcase/simulator/SimulatedDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/simulated-device/src/main/java/de/maibornwolff/iot_showcase/simulator/SimulatedDevice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulated-device/target/classes/de/maibornwolff/iot_showcase/simulator/SimulatedDevice$EventCallback.class" beforeDir="false" afterPath="$PROJECT_DIR$/simulated-device/target/classes/de/maibornwolff/iot_showcase/simulator/SimulatedDevice$EventCallback.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulated-device/target/classes/de/maibornwolff/iot_showcase/simulator/SimulatedDevice$MessageSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/simulated-device/target/classes/de/maibornwolff/iot_showcase/simulator/SimulatedDevice$MessageSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulated-device/target/classes/de/maibornwolff/iot_showcase/simulator/SimulatedDevice$TelemetryDataPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/simulated-device/target/classes/de/maibornwolff/iot_showcase/simulator/SimulatedDevice$TelemetryDataPoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulated-device/target/classes/de/maibornwolff/iot_showcase/simulator/SimulatedDevice.class" beforeDir="false" afterPath="$PROJECT_DIR$/simulated-device/target/classes/de/maibornwolff/iot_showcase/simulator/SimulatedDevice.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +34,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="GO_FMT" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -110,8 +107,16 @@
       <workItem from="1576486083225" duration="632000" />
       <workItem from="1576504333094" duration="7259000" />
       <workItem from="1577088310451" duration="1318000" />
-      <workItem from="1577095163503" duration="5117000" />
+      <workItem from="1577095163503" duration="5473000" />
     </task>
+    <task id="LOCAL-00001" summary="adaption simulated device for connection">
+      <created>1577136378039</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577136378039</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,5 +137,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="adaption simulated device for connection" />
+    <option name="LAST_COMMIT_MESSAGE" value="adaption simulated device for connection" />
   </component>
 </project>
