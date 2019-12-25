@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/webpage/src/assets/hands.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpage/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +96,7 @@
       <workItem from="1576504333094" duration="7259000" />
       <workItem from="1577088310451" duration="1318000" />
       <workItem from="1577095163503" duration="7145000" />
-      <workItem from="1577194176138" duration="3810000" />
+      <workItem from="1577194176138" duration="4721000" />
     </task>
     <task id="LOCAL-00001" summary="adaption simulated device for connection">
       <created>1577136378039</created>
@@ -110,7 +112,21 @@
       <option name="project" value="LOCAL" />
       <updated>1577136428636</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="after npm commands">
+      <created>1577306611461</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1577306611461</updated>
+    </task>
+    <task id="LOCAL-00004" summary="changing webpage name">
+      <created>1577306633570</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1577306633570</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +149,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="adaption simulated device for connection" />
     <MESSAGE value="new module for the webpage with vuejs" />
-    <option name="LAST_COMMIT_MESSAGE" value="new module for the webpage with vuejs" />
+    <MESSAGE value="after npm commands" />
+    <MESSAGE value="changing webpage name" />
+    <option name="LAST_COMMIT_MESSAGE" value="changing webpage name" />
   </component>
 </project>
