@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpage/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpage/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpage/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpage/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpage/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpage/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpage/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpage/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpage/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpage/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpage/webpage.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +25,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dataOrganisation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -107,7 +93,8 @@
       <workItem from="1576486083225" duration="632000" />
       <workItem from="1576504333094" duration="7259000" />
       <workItem from="1577088310451" duration="1318000" />
-      <workItem from="1577095163503" duration="5473000" />
+      <workItem from="1577095163503" duration="7145000" />
+      <workItem from="1577194176138" duration="3810000" />
     </task>
     <task id="LOCAL-00001" summary="adaption simulated device for connection">
       <created>1577136378039</created>
@@ -116,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577136378039</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="new module for the webpage with vuejs">
+      <created>1577136428636</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1577136428636</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +132,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="adaption simulated device for connection" />
-    <option name="LAST_COMMIT_MESSAGE" value="adaption simulated device for connection" />
+    <MESSAGE value="new module for the webpage with vuejs" />
+    <option name="LAST_COMMIT_MESSAGE" value="new module for the webpage with vuejs" />
   </component>
 </project>
