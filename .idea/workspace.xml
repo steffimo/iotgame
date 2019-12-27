@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="&quot;Go for IT&quot;-Button with some example handling function">
+    <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpage/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,7 +101,7 @@
       <workItem from="1577088310451" duration="1318000" />
       <workItem from="1577095163503" duration="7145000" />
       <workItem from="1577194176138" duration="13001000" />
-      <workItem from="1577363496204" duration="5899000" />
+      <workItem from="1577363496204" duration="15557000" />
     </task>
     <task id="LOCAL-00001" summary="adaption simulated device for connection">
       <created>1577136378039</created>
@@ -146,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577315137676</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="trials for DeviceMotionEvents (not working)">
+      <created>1577461415839</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1577461415839</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +179,7 @@
     <MESSAGE value="changing webpage name" />
     <MESSAGE value="changing some infos" />
     <MESSAGE value="&quot;Go for IT&quot;-Button with some example handling function" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Go for IT&quot;-Button with some example handling function" />
+    <MESSAGE value="trials for DeviceMotionEvents (not working)" />
+    <option name="LAST_COMMIT_MESSAGE" value="trials for DeviceMotionEvents (not working)" />
   </component>
 </project>
