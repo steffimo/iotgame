@@ -11,6 +11,7 @@
       <button @click="startDataTransfer">Go for IT</button>
       <div class="xValue">
         <p>shakedX {{xValue}}</p>
+          <p>shakedY</p>
       </div>
     </div>
   </div>
@@ -27,9 +28,47 @@ export default {
   },
   methods: {
     startDataTransfer() {
-      this.xValue = "Test";
+      this.xValue = ""+window.DeviceMotionEvent;
+      onClick();
+      //window.addEventListener('devicemotion',motion,true)
+       /* document.addEventListener('DOMContentLoaded', init, true);
+        function init() {
+            Window.console.log('Engage');
+            window.addEventListener('devicemotion', motion, true);
+        }*/
+      //TODO DeviceMotionEvent
+
     }
   }
+}
+
+function onClick() {
+    // feature detect
+    if (typeof DeviceMotionEvent.requestPermission === 'function') {
+        DeviceMotionEvent.requestPermission()
+            .then(permissionState => {
+                if (permissionState === 'granted') {
+                    window.addEventListener('devicemotion', () => {});
+                }
+            })
+            .catch(Window.console.error);
+    } else {
+        // handle regular non iOS 13+ devices
+    }
+}
+
+document.addEventListener('DOMContentLoaded', init, true);
+function init() {
+    Window.console.log('Engage');
+    window.addEventListener('devicemotion', motion, true);
+}
+
+function motion(e) {
+    let acc = e.acceleration;
+    this.xValue = ""+acc.x;
+    if (!acc.hasOwnProperty('x')) {
+        acc = e.accelerationIncludingGravity;
+    }
 }
 
 </script>
