@@ -60,7 +60,7 @@
                 this.setInterval();
             },
             // 'use strict';
-
+            // npm install --save azure-iot-device azure-iot-device-mqtt
             // The device connection string to authenticate the device with your IoT hub.
             //
             // NOTE: For simplicity, this sample sets the connection string in code.

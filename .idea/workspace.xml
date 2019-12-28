@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -103,7 +105,7 @@
       <workItem from="1577095163503" duration="7145000" />
       <workItem from="1577194176138" duration="13001000" />
       <workItem from="1577363496204" duration="15557000" />
-      <workItem from="1577571307004" duration="2545000" />
+      <workItem from="1577571307004" duration="3012000" />
     </task>
     <task id="LOCAL-00001" summary="adaption simulated device for connection">
       <created>1577136378039</created>
@@ -161,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577573844537</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="first try to fit into vuejs">
+      <created>1577574740722</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1577574740722</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +199,7 @@
     <MESSAGE value="&quot;Go for IT&quot;-Button with some example handling function" />
     <MESSAGE value="trials for DeviceMotionEvents (not working)" />
     <MESSAGE value="microsoft code without changes added" />
-    <option name="LAST_COMMIT_MESSAGE" value="microsoft code without changes added" />
+    <MESSAGE value="first try to fit into vuejs" />
+    <option name="LAST_COMMIT_MESSAGE" value="first try to fit into vuejs" />
   </component>
 </project>
