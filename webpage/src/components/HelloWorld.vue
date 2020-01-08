@@ -34,7 +34,6 @@
                 xValue: 'to shake',
                 yValue: 'to shake',
                 zValue: 'to shake',
-                // Using the Azure CLI:
                 // az iot hub device-identity show-connection-string --hub-name {YourIoTHubName} --device-id MyNodeDevice --output table
                 connectionString: 'HostName=ShowcaseHubSM.azure-devices.net;DeviceId=MyJavaDevice;SharedAccessKey=3MtwHpv0cPQlWyOPbtDxqJvsrV8U/Q906hMNcSB22jk='
             };
@@ -43,10 +42,21 @@
             startDataTransfer() {
                 this.clicked = true;
                 setTimeout(() => {this.clicked = false;}, 10*1000);
-                window.addEventListener('devicemotion', this.motion, true);
+                //requestPermission for iPhones, give permission manual
+                if (typeof DeviceMotionEvent.requestPermission === 'function') {
+                    DeviceMotionEvent.requestPermission()
+                        .then(permissionState => {
+                            if (permissionState === 'granted') {
+                                window.addEventListener('devicemotion', this.motion, true);
+                            }
+                        })
+                        .catch(Window.console.error);
+                } else {
+                    // handle regular non iOS 13+ devices
+                    window.addEventListener('devicemotion', this.motion, true);
+                }
             },
             motion(e) {
-                debugger;
                 console.log('Engage');
                 console.log(e);
                 let acc = e.acceleration;
@@ -55,22 +65,10 @@
                 this.zValue = acc.z;
                 this.setInterval();
             },
-            // 'use strict';
-
-            // npm install --save azure-iot-device azure-iot-device-mqtt
-            // The device connection string to authenticate the device with your IoT hub.
-            //
-            // NOTE: For simplicity, this sample sets the connection string in code.
-            // In a production environment, the recommended approach is to use an environment variable to make it available to your application or use an HSM or an x509 certificate.
-            // https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-security
             // Create a message and send it to the IoT Hub (TODO every second?)
             setInterval() {
                 // The sample connects to a device-specific MQTT endpoint on your IoT Hub.
-                /*var Mqtt = require('azure-iot-device-mqtt').Mqtt;
-                var DeviceClient = require('azure-iot-device').Client;
-                var Message = require('azure-iot-device').Message;
-                var client = DeviceClient.fromConnectionString(this.connectionString, Mqtt);*/
-               //https://stackoverflow.com/questions/51711853/connect-to-azure-iothub-using-mqtt-in-javascript/51719672
+                //https://stackoverflow.com/questions/51711853/connect-to-azure-iothub-using-mqtt-in-javascript/51719672
                 var mqtt = require('mqtt');
                 var deviceId = "MyJavaDevice";
                 var iotHubName = "ShowcaseHubSM";
@@ -98,45 +96,21 @@
                     temperature: temperature,
                     humidity: 60 + (Math.random() * 20)
                 });
-                // Add a custom application property to the message.
-                // An IoT hub can filter on these properties without access to the message body.
-                //message.properties.add('temperatureAlert', (temperature > 30) ? 'true' : 'false');
-                // eslint-disable-next-line no-console
                 console.log('Sending message: ' + message);
-
                 // Send the message.
                 client.publish('topic', message)
                 client.end()
 
-
                 /*client.sendEvent(message, function (err) {
                     if (err) {
-                        // eslint-disable-next-line no-console
                         console.error('send error: ' + err.toString());
                     } else {
-                        // eslint-disable-next-line no-console
                         console.log('message sent');
                     }
                 });*/
             }
         }
     }
-
-    /*for iPhones
-    function onClick() {
-        // feature detect
-        if (typeof DeviceMotionEvent.requestPermission === 'function') {
-            DeviceMotionEvent.requestPermission()
-                .then(permissionState => {
-                    if (permissionState === 'granted') {
-                        window.addEventListener('devicemotion', motion);
-                    }
-                })
-                .catch(Window.console.error);
-        } else {
-            // handle regular non iOS 13+ devices
-        }
-    }*/
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

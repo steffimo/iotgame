@@ -112,7 +112,7 @@
       <workItem from="1577363496204" duration="15557000" />
       <workItem from="1577571307004" duration="3238000" />
       <workItem from="1577702094155" duration="9673000" />
-      <workItem from="1578327087325" duration="10055000" />
+      <workItem from="1578327087325" duration="12280000" />
     </task>
     <task id="LOCAL-00001" summary="adaption simulated device for connection">
       <created>1577136378039</created>
@@ -198,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578494395420</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="10 seconds disabled button for webpage">
+      <created>1578496113689</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1578496113690</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,6 +238,7 @@
     <MESSAGE value="first try to fit into vuejs with updated dependencies (not working yet)" />
     <MESSAGE value="webpage: DeviceMotionEvent works now (https)" />
     <MESSAGE value="new frame for the analysis webpage" />
-    <option name="LAST_COMMIT_MESSAGE" value="new frame for the analysis webpage" />
+    <MESSAGE value="10 seconds disabled button for webpage" />
+    <option name="LAST_COMMIT_MESSAGE" value="10 seconds disabled button for webpage" />
   </component>
 </project>
