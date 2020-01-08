@@ -10,7 +10,7 @@
             your device for 10 seconds.
         </p>
         <div id="StartButton">
-            <button @click="startDataTransfer">Go for IT</button>
+            <button @click="startDataTransfer" :disabled='clicked'>Go for IT</button>
         </div>
         <div class='output-info'>
             <ul>
@@ -26,10 +26,11 @@
     export default {
         name: 'HelloWorld',
         props: {
-            msg: String,
+            msg: String
         },
         data: function () {
             return {
+                clicked: false,
                 xValue: 'to shake',
                 yValue: 'to shake',
                 zValue: 'to shake',
@@ -40,9 +41,9 @@
         },
         methods: {
             startDataTransfer() {
-                debugger;
+                this.clicked = true;
+                setTimeout(() => {this.clicked = false;}, 10*1000);
                 window.addEventListener('devicemotion', this.motion, true);
-
             },
             motion(e) {
                 debugger;

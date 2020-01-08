@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/analysis-webpage/.browserslistrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analysis-webpage/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analysis-webpage/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analysis-webpage/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analysis-webpage/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analysis-webpage/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analysis-webpage/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analysis-webpage/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analysis-webpage/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analysis-webpage/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analysis-webpage/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analysis-webpage/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analysis-webpage/src/components/HelloWorld.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analysis-webpage/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpage/vue.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpage/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -129,7 +112,7 @@
       <workItem from="1577363496204" duration="15557000" />
       <workItem from="1577571307004" duration="3238000" />
       <workItem from="1577702094155" duration="9673000" />
-      <workItem from="1578327087325" duration="8188000" />
+      <workItem from="1578327087325" duration="10055000" />
     </task>
     <task id="LOCAL-00001" summary="adaption simulated device for connection">
       <created>1577136378039</created>
@@ -201,7 +184,21 @@
       <option name="project" value="LOCAL" />
       <updated>1577575252414</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="webpage: DeviceMotionEvent works now (https)">
+      <created>1578494316358</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1578494316358</updated>
+    </task>
+    <task id="LOCAL-00012" summary="new frame for the analysis webpage">
+      <created>1578494395420</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1578494395420</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,6 +229,8 @@
     <MESSAGE value="microsoft code without changes added" />
     <MESSAGE value="first try to fit into vuejs" />
     <MESSAGE value="first try to fit into vuejs with updated dependencies (not working yet)" />
-    <option name="LAST_COMMIT_MESSAGE" value="first try to fit into vuejs with updated dependencies (not working yet)" />
+    <MESSAGE value="webpage: DeviceMotionEvent works now (https)" />
+    <MESSAGE value="new frame for the analysis webpage" />
+    <option name="LAST_COMMIT_MESSAGE" value="new frame for the analysis webpage" />
   </component>
 </project>
