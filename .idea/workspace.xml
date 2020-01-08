@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/analysis-webpage/src/assets/analytics.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis-webpage/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/analysis-webpage/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis-webpage/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis-webpage/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/analysis-webpage/src/components/HelloWorld.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +115,7 @@
       <workItem from="1577363496204" duration="15557000" />
       <workItem from="1577571307004" duration="3238000" />
       <workItem from="1577702094155" duration="9673000" />
-      <workItem from="1578327087325" duration="12280000" />
+      <workItem from="1578327087325" duration="14488000" />
     </task>
     <task id="LOCAL-00001" summary="adaption simulated device for connection">
       <created>1577136378039</created>
@@ -205,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578496113690</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="DeviceMotionEvent for iPhones enabled">
+      <created>1578498281335</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1578498281335</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +249,7 @@
     <MESSAGE value="webpage: DeviceMotionEvent works now (https)" />
     <MESSAGE value="new frame for the analysis webpage" />
     <MESSAGE value="10 seconds disabled button for webpage" />
-    <option name="LAST_COMMIT_MESSAGE" value="10 seconds disabled button for webpage" />
+    <MESSAGE value="DeviceMotionEvent for iPhones enabled" />
+    <option name="LAST_COMMIT_MESSAGE" value="DeviceMotionEvent for iPhones enabled" />
   </component>
 </project>
