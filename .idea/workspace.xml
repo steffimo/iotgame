@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/analysis-webpage/.browserslistrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis-webpage/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis-webpage/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis-webpage/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis-webpage/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis-webpage/babel.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis-webpage/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis-webpage/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis-webpage/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis-webpage/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis-webpage/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis-webpage/src/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis-webpage/src/components/HelloWorld.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analysis-webpage/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpage/vue.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpage/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/webpage/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" afterDir="false" />
     </list>
@@ -15,6 +30,13 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="frontend" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,7 +53,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ace-board" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../project-hub" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -105,7 +127,9 @@
       <workItem from="1577095163503" duration="7145000" />
       <workItem from="1577194176138" duration="13001000" />
       <workItem from="1577363496204" duration="15557000" />
-      <workItem from="1577571307004" duration="3012000" />
+      <workItem from="1577571307004" duration="3238000" />
+      <workItem from="1577702094155" duration="9673000" />
+      <workItem from="1578327087325" duration="8188000" />
     </task>
     <task id="LOCAL-00001" summary="adaption simulated device for connection">
       <created>1577136378039</created>
@@ -170,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577574740722</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="first try to fit into vuejs with updated dependencies (not working yet)">
+      <created>1577575252414</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1577575252414</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +231,7 @@
     <MESSAGE value="trials for DeviceMotionEvents (not working)" />
     <MESSAGE value="microsoft code without changes added" />
     <MESSAGE value="first try to fit into vuejs" />
-    <option name="LAST_COMMIT_MESSAGE" value="first try to fit into vuejs" />
+    <MESSAGE value="first try to fit into vuejs with updated dependencies (not working yet)" />
+    <option name="LAST_COMMIT_MESSAGE" value="first try to fit into vuejs with updated dependencies (not working yet)" />
   </component>
 </project>

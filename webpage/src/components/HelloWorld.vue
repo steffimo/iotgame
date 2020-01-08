@@ -30,28 +30,23 @@
         },
         data: function () {
             return {
-                xValue: "to shake",
-                yValue: "to shake",
-                zValue: "to shake",
+                xValue: 'to shake',
+                yValue: 'to shake',
+                zValue: 'to shake',
                 // Using the Azure CLI:
                 // az iot hub device-identity show-connection-string --hub-name {YourIoTHubName} --device-id MyNodeDevice --output table
-                connectionString: "HostName=ShowcaseHubSM.azure-devices.net;DeviceId=MyJavaDevice;SharedAccessKey=3MtwHpv0cPQlWyOPbtDxqJvsrV8U/Q906hMNcSB22jk=",
-                // Using the Node.js Device SDK for IoT Hub: https://github.com/Azure/azure-iot-sdk-node
-                // The sample connects to a device-specific MQTT endpoint on your IoT Hub.
-                Mqtt: require('azure-iot-device-mqtt').Mqtt,
-                DeviceClient: require('azure-iot-device').Client,
-                Message: require('azure-iot-device').Message
+                connectionString: 'HostName=ShowcaseHubSM.azure-devices.net;DeviceId=MyJavaDevice;SharedAccessKey=3MtwHpv0cPQlWyOPbtDxqJvsrV8U/Q906hMNcSB22jk='
             };
         },
         methods: {
             startDataTransfer() {
+                debugger;
                 window.addEventListener('devicemotion', this.motion, true);
 
             },
             motion(e) {
-                // eslint-disable-next-line no-console
+                debugger;
                 console.log('Engage');
-                // eslint-disable-next-line no-console
                 console.log(e);
                 let acc = e.acceleration;
                 this.xValue = acc.x;
@@ -60,6 +55,7 @@
                 this.setInterval();
             },
             // 'use strict';
+
             // npm install --save azure-iot-device azure-iot-device-mqtt
             // The device connection string to authenticate the device with your IoT hub.
             //
@@ -68,21 +64,51 @@
             // https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-security
             // Create a message and send it to the IoT Hub (TODO every second?)
             setInterval() {
-                // Simulate telemetry.
-                var client = this.DeviceClient.fromConnectionString(this.connectionString, this.Mqtt);
+                // The sample connects to a device-specific MQTT endpoint on your IoT Hub.
+                /*var Mqtt = require('azure-iot-device-mqtt').Mqtt;
+                var DeviceClient = require('azure-iot-device').Client;
+                var Message = require('azure-iot-device').Message;
+                var client = DeviceClient.fromConnectionString(this.connectionString, Mqtt);*/
+               //https://stackoverflow.com/questions/51711853/connect-to-azure-iothub-using-mqtt-in-javascript/51719672
+                var mqtt = require('mqtt');
+                var deviceId = "MyJavaDevice";
+                var iotHubName = "ShowcaseHubSM";
+                var userName = `${iotHubName}.azure-devices.net/${deviceId}/?api-version=2018-06-30`;
+
+                var client = mqtt.connect(`mqtts://${iotHubName}.azure-devices.net:8883`, {
+                    keepalive: 10,
+                    clientId: deviceId,
+                    protocolId: 'MQTT',
+                    clean: false,
+                    protocolVersion: 4,
+                    //reconnectPeriod: 1000,
+                    //connectTimeout: 30 * 1000,
+                    username: userName,
+                    //TODO SAS Key
+                    password: "SharedAccessSignature sr=.....",
+                    rejectUnauthorized: false,
+                });
+
+                console.log('client connected: '+client.connected);
+                //Dummy Data
+                //TODO real data
                 var temperature = 20 + (Math.random() * 15);
-                var message = new this.Message(JSON.stringify({
+                var message = JSON.stringify({
                     temperature: temperature,
                     humidity: 60 + (Math.random() * 20)
-                }));
+                });
                 // Add a custom application property to the message.
                 // An IoT hub can filter on these properties without access to the message body.
-                message.properties.add('temperatureAlert', (temperature > 30) ? 'true' : 'false');
+                //message.properties.add('temperatureAlert', (temperature > 30) ? 'true' : 'false');
                 // eslint-disable-next-line no-console
-                console.log('Sending message: ' + message.getData());
+                console.log('Sending message: ' + message);
 
                 // Send the message.
-                client.sendEvent(message, function (err) {
+                client.publish('topic', message)
+                client.end()
+
+
+                /*client.sendEvent(message, function (err) {
                     if (err) {
                         // eslint-disable-next-line no-console
                         console.error('send error: ' + err.toString());
@@ -90,7 +116,7 @@
                         // eslint-disable-next-line no-console
                         console.log('message sent');
                     }
-                });
+                });*/
             }
         }
     }
