@@ -107,12 +107,21 @@
 
                 console.log('client connected: ' + client.connected);
                 //Dummy Data
-                //TODO real data
                 var temperature = 20 + (Math.random() * 15);
                 var message = JSON.stringify({
                     temperature: temperature,
                     humidity: 60 + (Math.random() * 20)
                 });
+
+                //real data to json
+                /*var message = JSON.stringify({
+                    sessionID: this.session_id,
+                    deviceID: this.username,
+                    deviceCoordinateX: this.xValue,
+                    deviceCoordinateY: this.yValue,
+                    deviceCoordinateZ: this.zValue,
+                    timestamp: Date.now()
+                });*/
                 console.log('Sending message: ' + message);
                 // Send the message.
                 client.publish('topic', message)

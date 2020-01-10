@@ -36,7 +36,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ace-board" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../iot-showcase" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -112,7 +112,7 @@
       <workItem from="1577363496204" duration="15557000" />
       <workItem from="1577571307004" duration="3238000" />
       <workItem from="1577702094155" duration="9673000" />
-      <workItem from="1578327087325" duration="24235000" />
+      <workItem from="1578327087325" duration="25466000" />
     </task>
     <task id="LOCAL-00001" summary="adaption simulated device for connection">
       <created>1577136378039</created>
@@ -219,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578502118584</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="webpage: login form and pushing time over text">
+      <created>1578663087840</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1578663087840</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +262,7 @@
     <MESSAGE value="10 seconds disabled button for webpage" />
     <MESSAGE value="DeviceMotionEvent for iPhones enabled" />
     <MESSAGE value="analysis webpage updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="analysis webpage updated" />
+    <MESSAGE value="webpage: login form and pushing time over text" />
+    <option name="LAST_COMMIT_MESSAGE" value="webpage: login form and pushing time over text" />
   </component>
 </project>
