@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/analysis-webpage/src/assets/analytics.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis-webpage/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/analysis-webpage/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis-webpage/src/assets/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis-webpage/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/analysis-webpage/src/components/HelloWorld.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +36,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../project-hub" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ace-board" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -115,7 +112,7 @@
       <workItem from="1577363496204" duration="15557000" />
       <workItem from="1577571307004" duration="3238000" />
       <workItem from="1577702094155" duration="9673000" />
-      <workItem from="1578327087325" duration="14488000" />
+      <workItem from="1578327087325" duration="24235000" />
     </task>
     <task id="LOCAL-00001" summary="adaption simulated device for connection">
       <created>1577136378039</created>
@@ -215,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578498281335</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="analysis webpage updated">
+      <created>1578502118584</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1578502118584</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,6 +254,7 @@
     <MESSAGE value="new frame for the analysis webpage" />
     <MESSAGE value="10 seconds disabled button for webpage" />
     <MESSAGE value="DeviceMotionEvent for iPhones enabled" />
-    <option name="LAST_COMMIT_MESSAGE" value="DeviceMotionEvent for iPhones enabled" />
+    <MESSAGE value="analysis webpage updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="analysis webpage updated" />
   </component>
 </project>

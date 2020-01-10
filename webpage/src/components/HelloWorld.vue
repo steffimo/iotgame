@@ -9,6 +9,17 @@
             So now register to the next session and create your username. After pressing the button "Go for IT" shake
             your device for 10 seconds.
         </p>
+        <form id="login">
+            <p>
+                <label for="session_id">Session-ID</label>
+                <input id="session_id" v-model="session_id">
+            </p>
+
+            <p>
+                <label for="username">Username</label>
+                <input id="username" v-model="username">
+            </p>
+        </form>
         <div id="StartButton">
             <button @click="startDataTransfer" :disabled='clicked'>Go for IT</button>
         </div>
@@ -18,6 +29,9 @@
                 <li class='y_axis'><b>y</b> {{yValue}}</li>
                 <li class='z_axis'><b>z</b> {{zValue}}</li>
             </ul>
+        </div>
+        <div id="timeover" style="display: none;">
+            <p>Time is over!</p>
         </div>
     </div>
 </template>
@@ -35,13 +49,16 @@
                 yValue: 'to shake',
                 zValue: 'to shake',
                 // az iot hub device-identity show-connection-string --hub-name {YourIoTHubName} --device-id MyNodeDevice --output table
-                connectionString: 'HostName=ShowcaseHubSM.azure-devices.net;DeviceId=MyJavaDevice;SharedAccessKey=3MtwHpv0cPQlWyOPbtDxqJvsrV8U/Q906hMNcSB22jk='
+                connectionString: 'HostName=ShowcaseHubSM.azure-devices.net;DeviceId=MyJavaDevice;SharedAccessKey=3MtwHpv0cPQlWyOPbtDxqJvsrV8U/Q906hMNcSB22jk=',
+                errors: [],
+                session_id: null,
+                username: null
             };
         },
         methods: {
             startDataTransfer() {
                 this.clicked = true;
-                setTimeout(() => {this.clicked = false;}, 10*1000);
+                this.showTime();
                 //requestPermission for iPhones, give permission manual
                 if (typeof DeviceMotionEvent.requestPermission === 'function') {
                     DeviceMotionEvent.requestPermission()
@@ -88,7 +105,7 @@
                     rejectUnauthorized: false,
                 });
 
-                console.log('client connected: '+client.connected);
+                console.log('client connected: ' + client.connected);
                 //Dummy Data
                 //TODO real data
                 var temperature = 20 + (Math.random() * 15);
@@ -108,6 +125,13 @@
                         console.log('message sent');
                     }
                 });*/
+            },
+            showTime() {
+                //never set on false again, user must reload page
+                setTimeout(() => {
+                    //show something
+                    document.getElementById('timeover').style.display = "block";
+                }, 10 * 1000);
             }
         }
     }
@@ -131,5 +155,9 @@
 
     a {
         color: #42b983;
+    }
+
+    input {
+        margin-left: 10px;
     }
 </style>
