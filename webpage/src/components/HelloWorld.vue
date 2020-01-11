@@ -12,17 +12,17 @@
         <form id="login">
             <p>
                 <label for="session_id">Session-ID</label>
-                <input id="session_id" v-model="session_id">
+                <input id="session_id" v-model="session_id" required>
             </p>
 
             <p>
                 <label for="username">Username</label>
-                <input id="username" v-model="username">
+                <input id="username" v-model="username" required>
             </p>
+            <div id="StartButton">
+                <button type="submit" @submit="startDataTransfer" :disabled='clicked'>Go for IT</button>
+            </div>
         </form>
-        <div id="StartButton">
-            <button @click="startDataTransfer" :disabled='clicked'>Go for IT</button>
-        </div>
         <div class='output-info'>
             <ul>
                 <li class='x_axis'><b>x</b> {{xValue}}</li>
@@ -158,7 +158,6 @@
     }
 
     li {
-        display: inline-block;
         margin: 0 10px;
     }
 

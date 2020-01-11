@@ -4,7 +4,16 @@
     <p>
       Here are informations about your current session and the overall placements.
     </p>
-
+    <div class='output-info'>
+      <table>
+        <tr>
+          <th>Placement</th>
+          <th>Name</th>
+          <th>Energy</th>
+          <th>Date</th>
+        </tr>
+      </table>
+    </div>
   </div>
 </template>
 
@@ -31,5 +40,8 @@ li {
 }
 a {
   color: #42b983;
+}
+table, th, td {
+  border: 1px solid black;
 }
 </style>
