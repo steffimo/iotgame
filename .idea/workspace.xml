@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis-webpage/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/analysis-webpage/src/components/HelloWorld.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -113,7 +112,7 @@
       <workItem from="1577363496204" duration="15557000" />
       <workItem from="1577571307004" duration="3238000" />
       <workItem from="1577702094155" duration="9673000" />
-      <workItem from="1578327087325" duration="30038000" />
+      <workItem from="1578327087325" duration="32274000" />
     </task>
     <task id="LOCAL-00001" summary="adaption simulated device for connection">
       <created>1577136378039</created>
@@ -234,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578664279230</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="webpage: requirements for form">
+      <created>1578778324003</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1578778324003</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,6 +278,7 @@
     <MESSAGE value="analysis webpage updated" />
     <MESSAGE value="webpage: login form and pushing time over text" />
     <MESSAGE value="webpage: real data message availabe" />
-    <option name="LAST_COMMIT_MESSAGE" value="webpage: real data message availabe" />
+    <MESSAGE value="webpage: requirements for form" />
+    <option name="LAST_COMMIT_MESSAGE" value="webpage: requirements for form" />
   </component>
 </project>

@@ -12,15 +12,18 @@
         <form id="login">
             <p>
                 <label for="session_id">Session-ID</label>
-                <input id="session_id" v-model="session_id" required>
+                <input id="session_id" v-model="session_id">
             </p>
 
             <p>
                 <label for="username">Username</label>
-                <input id="username" v-model="username" required>
+                <input id="username" v-model="username">
             </p>
             <div id="StartButton">
-                <button type="submit" @submit="startDataTransfer" :disabled='clicked'>Go for IT</button>
+                <button @click="startDataTransfer" :disabled='clicked'>Go for IT</button>
+            </div>
+            <div id="unvalid" style="display: none;">
+                <p>No sessionID or no username!</p>
             </div>
         </form>
         <div class='output-info'>
@@ -57,6 +60,10 @@
         },
         methods: {
             startDataTransfer() {
+                if (this.session_id == null | this.session_id == "" | this.username == null | this.username == "" ){
+                    document.getElementById('unvalid').style.display = "block";
+                    return;
+                }
                 this.clicked = true;
                 this.showTime();
                 //requestPermission for iPhones, give permission manual
