@@ -3,7 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis-webpage/.browserslistrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis-webpage/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis-webpage/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis-webpage/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis-webpage/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis-webpage/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis-webpage/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis-webpage/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis-webpage/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis-webpage/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis-webpage/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis-webpage/src/assets/analytics.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis-webpage/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis-webpage/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulated-device/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulated-device/src/main/java/de/maibornwolff/iot_showcase/simulator/SimulatedDevice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulated-device/target/classes/de/maibornwolff/iot_showcase/simulator/SimulatedDevice$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulated-device/target/classes/de/maibornwolff/iot_showcase/simulator/SimulatedDevice$EventCallback.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulated-device/target/classes/de/maibornwolff/iot_showcase/simulator/SimulatedDevice$MessageSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulated-device/target/classes/de/maibornwolff/iot_showcase/simulator/SimulatedDevice$TelemetryDataPoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulated-device/target/classes/de/maibornwolff/iot_showcase/simulator/SimulatedDevice.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +56,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../iot-showcase" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -113,6 +133,7 @@
       <workItem from="1577571307004" duration="3238000" />
       <workItem from="1577702094155" duration="9673000" />
       <workItem from="1578327087325" duration="32274000" />
+      <workItem from="1579101659849" duration="447000" />
     </task>
     <task id="LOCAL-00001" summary="adaption simulated device for connection">
       <created>1577136378039</created>
