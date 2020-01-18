@@ -22,9 +22,6 @@
             <div id="StartButton">
                 <button @click="startDataTransfer" :disabled='clicked'>Go for IT</button>
             </div>
-            <div id="unvalid" style="display: none;">
-                <p>No sessionID or no username!</p>
-            </div>
         </form>
         <div class='output-info'>
             <ul>
@@ -61,7 +58,7 @@
         methods: {
             startDataTransfer() {
                 if (this.session_id == null | this.session_id == "" | this.username == null | this.username == "" ){
-                    document.getElementById('unvalid').style.display = "block";
+                    window.alert("No session or no username!");
                     return;
                 }
                 this.clicked = true;
