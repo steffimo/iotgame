@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" afterDir="false" />
     </list>
@@ -116,7 +115,7 @@
       <workItem from="1578327087325" duration="32274000" />
       <workItem from="1579101659849" duration="7047000" />
       <workItem from="1579258178505" duration="2588000" />
-      <workItem from="1579381386689" duration="18010000" />
+      <workItem from="1579381386689" duration="26484000" />
     </task>
     <task id="LOCAL-00001" summary="adaption simulated device for connection">
       <created>1577136378039</created>
@@ -251,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579102291323</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="connection for IoT Hub and refactoring">
+      <created>1579475260598</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1579475260598</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,6 +297,7 @@
     <MESSAGE value="webpage: real data message availabe" />
     <MESSAGE value="webpage: requirements for form" />
     <MESSAGE value="delete unnecessary files" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete unnecessary files" />
+    <MESSAGE value="connection for IoT Hub and refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="connection for IoT Hub and refactoring" />
   </component>
 </project>
