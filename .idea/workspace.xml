@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="update for trials">
+    <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpage/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpage/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/deploy.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" afterDir="false" />
@@ -121,7 +122,7 @@
       <workItem from="1579381386689" duration="27361000" />
       <workItem from="1579696282908" duration="1668000" />
       <workItem from="1579702611198" duration="1668000" />
-      <workItem from="1579873724059" duration="14040000" />
+      <workItem from="1579873724059" duration="15771000" />
     </task>
     <task id="LOCAL-00001" summary="adaption simulated device for connection">
       <created>1577136378039</created>
