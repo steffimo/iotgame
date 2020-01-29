@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="sendingTimestamp and mqtt client things">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="update for trials">
       <change beforePath="$PROJECT_DIR$/webpage/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/deploy.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -121,7 +121,7 @@
       <workItem from="1579381386689" duration="27361000" />
       <workItem from="1579696282908" duration="1668000" />
       <workItem from="1579702611198" duration="1668000" />
-      <workItem from="1579873724059" duration="13793000" />
+      <workItem from="1579873724059" duration="14040000" />
     </task>
     <task id="LOCAL-00001" summary="adaption simulated device for connection">
       <created>1577136378039</created>
@@ -270,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579629743896</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="update for trials">
+      <created>1580310730940</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1580310730940</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,6 +319,7 @@
     <MESSAGE value="delete unnecessary files" />
     <MESSAGE value="connection for IoT Hub and refactoring" />
     <MESSAGE value="sendingTimestamp and mqtt client things" />
-    <option name="LAST_COMMIT_MESSAGE" value="sendingTimestamp and mqtt client things" />
+    <MESSAGE value="update for trials" />
+    <option name="LAST_COMMIT_MESSAGE" value="update for trials" />
   </component>
 </project>
