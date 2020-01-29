@@ -48,9 +48,6 @@
                 xValue: 'to shake',
                 yValue: 'to shake',
                 zValue: 'to shake',
-                // az iot hub device-identity show-connection-string --hub-name {YourIoTHubName} --device-id MyNodeDevice --output table
-                connectionString: 'HostName=ShowcaseHubSM.azure-devices.net;DeviceId=MyJavaDevice;SharedAccessKey=3MtwHpv0cPQlWyOPbtDxqJvsrV8U/Q906hMNcSB22jk=',
-                errors: [],
                 session_id: null,
                 username: null
             };
@@ -81,67 +78,71 @@
                 console.log('Engage');
                 console.log(e);
                 let acc = e.acceleration;
-                this.xValue = acc.x;
-                this.yValue = acc.y;
-                this.zValue = acc.z;
-                this.setInterval();
+                this.xValue = Math.round(acc.x*100)/100;
+                this.yValue = Math.round(acc.y*100)/100;
+                this.zValue = Math.round(acc.z*100)/100;
+                //TODO every second/intervall!
+                this.sendMessage();
             },
-            // Create a message and send it to the IoT Hub (TODO every second?)
-            setInterval() {
-                // The sample connects to a device-specific MQTT endpoint on your IoT Hub.
-                //https://stackoverflow.com/questions/51711853/connect-to-azure-iothub-using-mqtt-in-javascript/51719672
-                var mqtt = require('mqtt');
-                var deviceId = "MyJavaDevice";
-                var iotHubName = "ShowcaseHubSM";
-                var userName = `${iotHubName}.azure-devices.net/${deviceId}/?api-version=2018-06-30`;
-
-                var client = mqtt.connect(`mqtts://${iotHubName}.azure-devices.net:8883`, {
-                    keepalive: 10,
-                    clientId: deviceId,
+            // Create a message and send it to the IoT Hub
+            sendMessage() {
+                var mqtt = require("mqtt");
+                var deviceId = "TestDeviceWeb";
+                var host='ShowcaseHubSM.azure-devices.net';
+                var sharedKey = 'SharedAccessSignature sr=ShowcaseHubSM.azure-devices.net%2Fdevices%2FTestDeviceWeb&sig=%2BtmniSmyDNXFi8yz%2FF9V%2FdzJLGwCLIsS4iB5eUk9D0I%3D&se=1580323571';
+                var topic = 'devices/'+deviceId+'/messages/events/';
+                var client  = mqtt.connect({
+                    host:host,
+                    port:443,
+                    path:'/$iothub/websocket?iothub-no-client-cert=true',
+                    protocol: 'mqtts',
                     protocolId: 'MQTT',
-                    clean: false,
                     protocolVersion: 4,
-                    //reconnectPeriod: 1000,
-                    //connectTimeout: 30 * 1000,
-                    username: userName,
-                    //TODO SAS Key
-                    password: "SharedAccessSignature sr=.....",
-                    rejectUnauthorized: false,
+                    clientId:deviceId,
+                    username: host+'/'+deviceId+'/api-version=2018-06-30',
+                    password: sharedKey,
+                    keepalive: 30000
                 });
 
-                console.log('client connected: ' + client.connected);
                 //Dummy Data
-                var temperature = 20 + (Math.random() * 15);
+                /*var temperature = 20 + (Math.random() * 15);
                 var message = JSON.stringify({
                     temperature: temperature,
                     humidity: 60 + (Math.random() * 20)
-                });
+                });*/
 
                 //real data to json
-                /*var message = JSON.stringify({
+                var message = JSON.stringify({
                     sessionID: this.session_id,
                     deviceID: this.username,
                     deviceCoordinateX: this.xValue,
                     deviceCoordinateY: this.yValue,
                     deviceCoordinateZ: this.zValue,
-                    timestamp: Date.now()
-                });*/
-                console.log('Sending message: ' + message);
-                // Send the message.
-                client.publish('topic', message)
-                client.end()
+                    sendingTimestamp: Date.now()
+                });
 
-                /*client.sendEvent(message, function (err) {
-                    if (err) {
-                        console.error('send error: ' + err.toString());
-                    } else {
-                        console.log('message sent');
-                    }
-                });*/
+                client.on('connect', function(packet){
+                    console.log('mqtt connected!', packet);
+                    console.log('Sending message: ' + message);
+                    // Send the message.
+                    client.publish(topic, message);
+                })
+
+                client.on('reconnect', function(){
+                    console.log('mqtt reconnected!');
+                })
+                client.on('close', function(c){
+                    console.log('mqtt closed!',c);
+                })
+                client.on('message', function(topic, message){
+                    var string = new TextDecoder("utf-8").decode(message);
+                    console.log('receive!',string);
+                })
             },
             showTime() {
                 //never set on false again, user must reload page
                 setTimeout(() => {
+                    window.removeEventListener('devicemotion', this.motion, true);
                     //show something
                     document.getElementById('timeover').style.display = "block";
                 }, 10 * 1000);
