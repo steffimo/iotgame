@@ -10,8 +10,6 @@ Nice to have: [vue-devtools](https://github.com/vuejs/vue-devtools)
 ## Project setup
 ```
 npm install
-npm install axios
-npm install mqtt --save
 ```
 [Azure IoT Explorer](https://github.com/Azure/azure-iot-explorer/releases)
 
