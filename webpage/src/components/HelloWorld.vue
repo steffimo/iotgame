@@ -6,11 +6,11 @@
             of a thesis.
         </p>
         <p>Your current session is identified with <b>{{sessionID}}</b>.</p>
-        <p>Create your username. After pressing the button "Go for IT", shake your device for 10 seconds.</p>
+        <p>First, create your username. Second, press the button "Go for IT". After pressing the button, shake your
+            device for 10 seconds.</p>
         <form id="login">
             <p>
-                <label for="username">Username</label>
-                <input id="username" v-model="username" placeholder="Username">
+                <input id="username" v-model="username" placeholder="Create Your username here">
             </p>
             <div id="StartButton">
                 <button @click="startDataTransfer" :disabled='clicked'>Go for IT</button>
@@ -56,6 +56,10 @@
                     window.alert("No username!");
                     return;
                 }
+                if (this.sessionID == null) {
+                    window.alert("No session! Scann again!");
+                    return;
+                }
                 this.clicked = true;
                 this.showTime();
                 //requestPermission for iPhones, give permission manual
@@ -84,12 +88,13 @@
             },
             // Create a message and send it to the IoT Hub
             sendMessage() {
-                var mqtt = require("mqtt");
-                var deviceId = "TestDeviceWeb";
-                var host = 'ShowcaseHubSM.azure-devices.net';
-                var sharedKey = 'SharedAccessSignature sr=ShowcaseHubSM.azure-devices.net%2Fdevices%2FTestDeviceWeb&sig=1FdvIkvyvQxbYSV%2Fxr78FfKFbdmCy3kp%2FGWQepl4Wvw%3D&se=1580652484';
-                var topic = 'devices/' + deviceId + '/messages/events/';
-                var client = mqtt.connect({
+                let mqtt = require("mqtt");
+                let deviceId = "TestDeviceWeb";
+                let host = 'ShowcaseHubSM.azure-devices.net';
+                let sharedAccessKey = 'ZYwl6LA2+OlxOKWOPqjhx1qDFR+2oNZFavQuQp/t1Ao=';
+                let sharedGeneratedKey = this.generateSAS(host + '/devices/' + deviceId, sharedAccessKey, null, 2);
+                let topic = 'devices/' + deviceId + '/messages/events/';
+                let client = mqtt.connect({
                     host: host,
                     port: 443,
                     path: '/$iothub/websocket?iothub-no-client-cert=true',
@@ -98,11 +103,11 @@
                     protocolVersion: 4,
                     clientId: deviceId,
                     username: host + '/' + deviceId + '/api-version=2018-06-30',
-                    password: sharedKey,
+                    password: sharedGeneratedKey,
                     keepalive: 30000
                 });
 
-                var message = JSON.stringify({
+                let message = JSON.stringify({
                     sessionID: this.sessionID,
                     deviceID: this.username,
                     deviceCoordinateX: this.xValue,
@@ -125,7 +130,7 @@
                     console.log('mqtt closed!', c);
                 })
                 client.on('message', function (topic, message) {
-                    var string = new TextDecoder("utf-8").decode(message);
+                    let string = new TextDecoder("utf-8").decode(message);
                     console.log('receive!', string);
                 })
             },
@@ -136,6 +141,29 @@
                     //show something
                     document.getElementById('timeover').style.display = "block";
                 }, 10 * 1000);
+            },
+            generateSAS(resourceUri, signingKey, policyName, expiresInMins) {
+                console.log("Generating")
+                const crypto = require('crypto');
+
+                resourceUri = encodeURIComponent(resourceUri);
+
+                // Set expiration in seconds
+                let expires = (Date.now() / 1000) + expiresInMins * 60;
+                expires = Math.ceil(expires);
+                let toSign = resourceUri + '\n' + expires;
+
+                // Use crypto
+                let hmac = crypto.createHmac('sha256', Buffer.from(signingKey, 'base64'));
+                hmac.update(toSign);
+                let base64UriEncoded = encodeURIComponent(hmac.digest('base64'));
+
+                // Construct authorization string
+                let token = "SharedAccessSignature sr=" + resourceUri + "&sig="
+                    + base64UriEncoded + "&se=" + expires;
+                if (policyName) token += "&skn="+policyName;
+                console.log("Generating end")
+                return token;
             }
         }
     }

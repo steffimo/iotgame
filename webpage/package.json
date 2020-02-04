@@ -11,7 +11,9 @@
     "azure-iot-device": "^1.12.1",
     "azure-iot-device-mqtt": "^1.11.1",
     "core-js": "^3.4.3",
-    "vue": "^2.6.10"
+    "crypto-js": "^3.1.9-1",
+    "vue": "^2.6.10",
+    "mqtt": "latest"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.1.0",
