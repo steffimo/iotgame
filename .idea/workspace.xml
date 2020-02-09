@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpage/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpage/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,9 +30,15 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="GO_FMT" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -53,18 +56,6 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="npm.build">
     <configuration name="SimulatedDevice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -128,7 +119,13 @@
       <workItem from="1579702611198" duration="1668000" />
       <workItem from="1579873724059" duration="22211000" />
       <workItem from="1580369584393" duration="1763000" />
-      <workItem from="1580458681796" duration="18755000" />
+      <workItem from="1580458681796" duration="21580000" />
+      <workItem from="1581064014761" duration="7917000" />
+      <workItem from="1581108787289" duration="2547000" />
+      <workItem from="1581160748234" duration="137000" />
+      <workItem from="1581160915501" duration="272000" />
+      <workItem from="1581161286708" duration="1207000" />
+      <workItem from="1581236955209" duration="653000" />
     </task>
     <task id="LOCAL-00001" summary="adaption simulated device for connection">
       <created>1577136378039</created>
@@ -298,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580637902280</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="generate SAS token with function for 2 min">
+      <created>1580858075308</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1580858075308</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,6 +349,17 @@
     <MESSAGE value="sendingTimestamp and mqtt client things" />
     <MESSAGE value="update for trials" />
     <MESSAGE value="getting sessionID from url parameter" />
-    <option name="LAST_COMMIT_MESSAGE" value="getting sessionID from url parameter" />
+    <MESSAGE value="generate SAS token with function for 2 min" />
+    <option name="LAST_COMMIT_MESSAGE" value="generate SAS token with function for 2 min" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="72" key="#Notifications" timestamp="1581236971422">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="72" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1581236971422" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1581237844149">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1581237844149" />
   </component>
 </project>

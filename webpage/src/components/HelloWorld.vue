@@ -42,7 +42,9 @@
                 yValue: 'to shake',
                 zValue: 'to shake',
                 username: null,
-                sessionID: String
+                sessionID: String,
+                lastMessageTime: 0,
+                timePeriod: 1000
             };
         },
         created() {
@@ -77,6 +79,7 @@
                 }
             },
             motion(e) {
+                let currentTime = Date.now()
                 console.log('Engage');
                 console.log(e);
                 let acc = e.acceleration;
@@ -84,7 +87,11 @@
                 this.yValue = Math.round(acc.y * 100) / 100;
                 this.zValue = Math.round(acc.z * 100) / 100;
                 //TODO every second/intervall!
-                this.sendMessage();
+                if (this.lastMessageTime == 0 || this.lastMessageTime+this.timePeriod < currentTime){
+                    console.log("New Message now on sending status")
+                    this.sendMessage();
+                    this.lastMessageTime = Date.now();
+                }
             },
             // Create a message and send it to the IoT Hub
             sendMessage() {
@@ -169,7 +176,6 @@
     }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     ul {
         list-style-type: none;
