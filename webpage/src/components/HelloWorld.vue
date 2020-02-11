@@ -44,13 +44,19 @@
                 username: null,
                 sessionID: String,
                 lastMessageTime: 0,
-                timePeriod: 1000
+                timePeriod: 1000,
+                topic: String,
+                client: undefined
             };
         },
         created() {
             let uri = window.location.search.substring(1);
             let params = new URLSearchParams(uri);
             this.sessionID = params.get("session");
+            this.createMQTTConnection();
+        },
+        beforeDestroy() {
+            this.client.end();
         },
         methods: {
             startDataTransfer() {
@@ -63,18 +69,20 @@
                     return;
                 }
                 this.clicked = true;
-                this.showTime();
+                //showTime erst nach der Permission ausführen, um gleiche Zeit/Anzahl der Nachrichten für iOS und Android
                 //requestPermission for iPhones, give permission manual
                 if (typeof DeviceMotionEvent.requestPermission === 'function') {
                     DeviceMotionEvent.requestPermission()
                         .then(permissionState => {
                             if (permissionState === 'granted') {
                                 window.addEventListener('devicemotion', this.motion, true);
+                                this.showTime();
                             }
                         })
                         .catch(Window.console.error);
                 } else {
                     // handle regular non iOS 13+ devices
+                    this.showTime();
                     window.addEventListener('devicemotion', this.motion, true);
                 }
             },
@@ -86,22 +94,20 @@
                 this.xValue = Math.round(acc.x * 100) / 100;
                 this.yValue = Math.round(acc.y * 100) / 100;
                 this.zValue = Math.round(acc.z * 100) / 100;
-                //TODO every second/intervall!
-                if (this.lastMessageTime == 0 || this.lastMessageTime+this.timePeriod < currentTime){
+                if (this.lastMessageTime == 0 || this.lastMessageTime + this.timePeriod < currentTime) {
                     console.log("New Message now on sending status")
-                    this.sendMessage();
+                    this.sendMessage(this.topic);
                     this.lastMessageTime = Date.now();
                 }
             },
-            // Create a message and send it to the IoT Hub
-            sendMessage() {
+            async createMQTTConnection() {
                 let mqtt = require("mqtt");
                 let deviceId = "TestDeviceWeb";
                 let host = 'ShowcaseHubSM.azure-devices.net';
                 let sharedAccessKey = 'ZYwl6LA2+OlxOKWOPqjhx1qDFR+2oNZFavQuQp/t1Ao=';
                 let sharedGeneratedKey = this.generateSAS(host + '/devices/' + deviceId, sharedAccessKey, null, 2);
-                let topic = 'devices/' + deviceId + '/messages/events/';
-                let client = mqtt.connect({
+                this.topic = 'devices/' + deviceId + '/messages/events/';
+                this.client = mqtt.connect({
                     host: host,
                     port: 443,
                     path: '/$iothub/websocket?iothub-no-client-cert=true',
@@ -113,7 +119,22 @@
                     password: sharedGeneratedKey,
                     keepalive: 30000
                 });
-
+                this.client.on('connect', function (packet) {
+                    console.log('mqtt connected at the beginning', packet);
+                });
+                this.client.on('reconnect', function () {
+                    console.log('mqtt reconnected!');
+                });
+                this.client.on('message', function (topic, message) {
+                    let string = new TextDecoder("utf-8").decode(message);
+                    console.log('receive!', string);
+                });
+                this.client.on('close', function (c) {
+                    console.log('mqtt closed!', c);
+                });
+            },
+            // Create a message and send it to the IoT Hub
+            sendMessage(topic) {
                 let message = JSON.stringify({
                     sessionID: this.sessionID,
                     deviceID: this.username,
@@ -122,53 +143,34 @@
                     deviceCoordinateZ: this.zValue,
                     sendingTimestamp: Date.now()
                 });
-
-                client.on('connect', function (packet) {
-                    console.log('mqtt connected!', packet);
-                    console.log('Sending message: ' + message);
-                    // Send the message.
-                    client.publish(topic, message);
-                })
-
-                client.on('reconnect', function () {
-                    console.log('mqtt reconnected!');
-                })
-                client.on('close', function (c) {
-                    console.log('mqtt closed!', c);
-                })
-                client.on('message', function (topic, message) {
-                    let string = new TextDecoder("utf-8").decode(message);
-                    console.log('receive!', string);
-                })
+                console.log('Sending message: ' + message);
+                this.client.publish(topic, message);
             },
             showTime() {
                 //never set on false again, user must reload page
                 setTimeout(() => {
                     window.removeEventListener('devicemotion', this.motion, true);
                     //show something
+                    //Idee: navigator.vibrate(200);
                     document.getElementById('timeover').style.display = "block";
                 }, 10 * 1000);
             },
             generateSAS(resourceUri, signingKey, policyName, expiresInMins) {
                 console.log("Generating")
                 const crypto = require('crypto');
-
                 resourceUri = encodeURIComponent(resourceUri);
-
                 // Set expiration in seconds
                 let expires = (Date.now() / 1000) + expiresInMins * 60;
                 expires = Math.ceil(expires);
                 let toSign = resourceUri + '\n' + expires;
-
                 // Use crypto
                 let hmac = crypto.createHmac('sha256', Buffer.from(signingKey, 'base64'));
                 hmac.update(toSign);
                 let base64UriEncoded = encodeURIComponent(hmac.digest('base64'));
-
                 // Construct authorization string
                 let token = "SharedAccessSignature sr=" + resourceUri + "&sig="
                     + base64UriEncoded + "&se=" + expires;
-                if (policyName) token += "&skn="+policyName;
+                if (policyName) token += "&skn=" + policyName;
                 console.log("Generating end")
                 return token;
             }
