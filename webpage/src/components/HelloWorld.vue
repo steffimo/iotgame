@@ -103,8 +103,11 @@
             async createMQTTConnection() {
                 let mqtt = require("mqtt");
                 let deviceId = "TestDeviceWeb";
-                let host = 'ShowcaseHubSM.azure-devices.net';
-                let sharedAccessKey = 'ZYwl6LA2+OlxOKWOPqjhx1qDFR+2oNZFavQuQp/t1Ao=';
+                let host = 'ShowcaseHub.azure-devices.net';
+                //let host = 'ShowcaseHubSM.azure-devices.net';
+                //Device Shared Access Key
+                let sharedAccessKey = 'oGCxm9N23jyDtq9EC9LAoqR95PrSEg5uzwpXX9o6R0E=';
+                //let sharedAccessKey = 'ZYwl6LA2+OlxOKWOPqjhx1qDFR+2oNZFavQuQp/t1Ao=';
                 let sharedGeneratedKey = this.generateSAS(host + '/devices/' + deviceId, sharedAccessKey, null, 2);
                 this.topic = 'devices/' + deviceId + '/messages/events/';
                 this.client = mqtt.connect({
@@ -151,7 +154,8 @@
                 setTimeout(() => {
                     window.removeEventListener('devicemotion', this.motion, true);
                     //show something
-                    //Idee: navigator.vibrate(200);
+                    //Idee: navigator.vibrate(200); funktioniert nicht =>
+                    //TODO sound abspielen
                     document.getElementById('timeover').style.display = "block";
                 }, 10 * 1000);
             },
