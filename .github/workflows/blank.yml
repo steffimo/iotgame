@@ -15,21 +15,18 @@ jobs:
     - name: Install Dependencies
       run:  npm install
       working-directory: ./webpage
-    - name: Build and deploy
+    - name: Build
       env:
         NODE_ENV: production
       working-directory: ./webpage
       run: |
         npm run build
 
-        # navigate into the build output directory
-        cd dist
-        
-        git init
-        git add -A
-        git commit -m 'deploy'
-
-        # if you are deploying to https://<USERNAME>.github.io/<REPO>
-        git push -f https://github.com/steffimo/iotgame.git master:gh-pages
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: webpage/dist # The folder the action should deploy.
 
  
