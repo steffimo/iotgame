@@ -30,6 +30,7 @@
 </template>
 
 <script>
+    const axios = require('axios').default;
     export default {
         name: 'HelloWorld',
         props: {
@@ -37,6 +38,8 @@
         },
         data: function () {
             return {
+                deviceID: String,
+                sharedAccessKey: String,
                 clicked: false,
                 xValue: 'to shake',
                 yValue: 'to shake',
@@ -49,16 +52,39 @@
                 client: undefined
             };
         },
-        created() {
+        async created() {
+            await this.getDeviceID();
             let uri = window.location.search.substring(1);
             let params = new URLSearchParams(uri);
             this.sessionID = params.get("session");
             this.createMQTTConnection();
         },
         beforeDestroy() {
+            //TODO
+            console.log("Before Destroy reached")
+            axios.post('api/ResetDeviceID?deviceID='+this.deviceID).then(() => console.log("Reset device")).catch(e => console.log(e))
+            //this.releaseDevice();
             this.client.end();
         },
         methods: {
+            async getDeviceID() {
+                try {
+                    let response = await axios.get(API_URL + '/api/GetDeviceID') // eslint-disable-line
+                    console.log(response.data)
+                    this.deviceID = response.data.deviceID;
+                    this.sharedAccessKey = response.data.sharedAccessKey;
+                } catch (e) {
+                    console.log("Error getting data: " + e)
+                }
+            },
+            releaseDevice() {
+                try {
+                    axios.post(API_URL + 'api/ResetDeviceID?deviceID='+this.deviceID) // eslint-disable-line
+                    console.log("Device reset")
+                } catch (e) {
+                    console.log("Error resetting device: " + e)
+                }
+            },
             startDataTransfer() {
                 if (this.username == null | this.username == "") {
                     window.alert("No username!");
@@ -102,14 +128,15 @@
             },
             async createMQTTConnection() {
                 let mqtt = require("mqtt");
-                let deviceId = "TestDeviceWeb";
+                //let deviceID = "TestDeviceWeb";
                 let host = 'ShowcaseHub.azure-devices.net';
                 //let host = 'ShowcaseHubSM.azure-devices.net';
                 //Device Shared Access Key
-                let sharedAccessKey = 'oGCxm9N23jyDtq9EC9LAoqR95PrSEg5uzwpXX9o6R0E=';
+                //let sharedAccessKey = 'oGCxm9N23jyDtq9EC9LAoqR95PrSEg5uzwpXX9o6R0E=';
                 //let sharedAccessKey = 'ZYwl6LA2+OlxOKWOPqjhx1qDFR+2oNZFavQuQp/t1Ao=';
-                let sharedGeneratedKey = this.generateSAS(host + '/devices/' + deviceId, sharedAccessKey, null, 2);
-                this.topic = 'devices/' + deviceId + '/messages/events/';
+                console.log("Ist da "+this.deviceID+" "+this.sharedAccessKey)
+                let sharedGeneratedKey = this.generateSAS(host + '/devices/' + this.deviceID, this.sharedAccessKey, null, 2);
+                this.topic = 'devices/' + this.deviceID + '/messages/events/';
                 this.client = mqtt.connect({
                     host: host,
                     port: 443,
@@ -117,8 +144,8 @@
                     protocol: 'mqtts',
                     protocolId: 'MQTT',
                     protocolVersion: 4,
-                    clientId: deviceId,
-                    username: host + '/' + deviceId + '/api-version=2018-06-30',
+                    clientId: this.deviceID,
+                    username: host + '/' + this.deviceID + '/api-version=2018-06-30',
                     password: sharedGeneratedKey,
                     keepalive: 30000
                 });
