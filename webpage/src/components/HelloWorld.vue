@@ -59,13 +59,6 @@
             this.sessionID = params.get("session");
             this.createMQTTConnection();
         },
-        beforeDestroy() {
-            //TODO
-            console.log("Before Destroy reached")
-            axios.post('api/ResetDeviceID?deviceID='+this.deviceID).then(() => console.log("Reset device")).catch(e => console.log(e))
-            //this.releaseDevice();
-            this.client.end();
-        },
         methods: {
             async getDeviceID() {
                 try {
@@ -77,9 +70,9 @@
                     console.log("Error getting data: " + e)
                 }
             },
-            releaseDevice() {
+            async releaseDevice() {
                 try {
-                    axios.post(API_URL + 'api/ResetDeviceID?deviceID='+this.deviceID) // eslint-disable-line
+                    await axios.post(API_URL + 'api/ResetDeviceID?deviceID=' + this.deviceID) // eslint-disable-line
                     console.log("Device reset")
                 } catch (e) {
                     console.log("Error resetting device: " + e)
@@ -184,6 +177,8 @@
                     //Idee: navigator.vibrate(200); funktioniert nicht =>
                     //TODO sound abspielen
                     document.getElementById('timeover').style.display = "block";
+                    this.releaseDevice();
+                    this.client.end();
                 }, 10 * 1000);
             },
             generateSAS(resourceUri, signingKey, policyName, expiresInMins) {

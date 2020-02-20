@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpage/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpage/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpage/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/vue.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +139,7 @@
       <workItem from="1581161286708" duration="1207000" />
       <workItem from="1581236955209" duration="10527000" />
       <workItem from="1581321930340" duration="18417000" />
-      <workItem from="1581792531559" duration="28275000" />
+      <workItem from="1581792531559" duration="44060000" />
     </task>
     <task id="LOCAL-00001" summary="adaption simulated device for connection">
       <created>1577136378039</created>
@@ -340,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581869962444</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="getting deviceID and SAK from database + production and dev mode">
+      <created>1582036218988</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1582036218988</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,7 +368,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/webpage" />
     </ignored-roots>
-    <MESSAGE value="after npm commands" />
     <MESSAGE value="changing webpage name" />
     <MESSAGE value="changing some infos" />
     <MESSAGE value="&quot;Go for IT&quot;-Button with some example handling function" />
@@ -389,7 +392,8 @@
     <MESSAGE value="message limit with time period" />
     <MESSAGE value="fixed message sending duplications" />
     <MESSAGE value="changes for the other azure account" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes for the other azure account" />
+    <MESSAGE value="getting deviceID and SAK from database + production and dev mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="getting deviceID and SAK from database + production and dev mode" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="72" key="#Custom_Plugin_Repositories" timestamp="1581594080618">
@@ -404,9 +408,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="72" key="#Plugins/0.0.1536.824@0.0.1536.824" timestamp="1581605199380" />
-    <state x="387" y="8" key="CommitChangelistDialog2" timestamp="1581869961452">
+    <state x="387" y="8" key="CommitChangelistDialog2" timestamp="1582036217435">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="387" y="8" key="CommitChangelistDialog2/0.0.1536.824/1920.-201.2560.1400@0.0.1536.824" timestamp="1582036217435" />
     <state x="387" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1581869961452" />
     <state x="93" y="93" width="1350" height="638" maximized="true" key="DiffContextDialog" timestamp="1581339295242">
       <screen x="0" y="0" width="1536" height="824" />
@@ -429,9 +434,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581862662485" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1581869965240">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1582036229452">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.-201.2560.1400@0.0.1536.824" timestamp="1582036229452" />
     <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1581869965240" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1581593862059">
       <screen x="0" y="0" width="1536" height="824" />
