@@ -72,7 +72,7 @@
             },
             async releaseDevice() {
                 try {
-                    await axios.post(API_URL + 'api/ResetDeviceID?deviceID=' + this.deviceID) // eslint-disable-line
+                    await axios.post(API_URL + '/api/ResetDeviceID?deviceID=' + this.deviceID) // eslint-disable-line
                     console.log("Device reset")
                 } catch (e) {
                     console.log("Error resetting device: " + e)
@@ -173,9 +173,6 @@
                 //never set on false again, user must reload page
                 setTimeout(() => {
                     window.removeEventListener('devicemotion', this.motion, true);
-                    //show something
-                    //Idee: navigator.vibrate(200); funktioniert nicht =>
-                    //TODO sound abspielen
                     document.getElementById('timeover').style.display = "block";
                     this.releaseDevice();
                     this.client.end();
