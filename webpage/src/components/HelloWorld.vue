@@ -6,11 +6,11 @@
             of a thesis.
         </p>
         <p>Your current session is identified with <b>{{sessionID}}</b>.</p>
-        <p>First, create your username. Second, press the button "Go for IT". After pressing the button, shake your
-            device for 10 seconds.</p>
+        <p>First, create your username. Second, press the button "Go for IT". After pressing the button, explore your accelerometer data - but be ready to shake your
+            device for 10 seconds to win the game after starting the countdown ;)</p>
         <form id="login">
             <p>
-                <input id="username" v-model="username" placeholder="Create Your username here">
+                <input id="username" v-model="username" placeholder="Create Your username here" :disabled='clicked'>
             </p>
             <div id="StartButton">
                 <button @click="startDataTransfer" :disabled='clicked'>Go for IT</button>
@@ -176,7 +176,7 @@
                     document.getElementById('timeover').style.display = "block";
                     this.releaseDevice();
                     this.client.end();
-                }, 10 * 1000);
+                }, 30 * 1000);
             },
             generateSAS(resourceUri, signingKey, policyName, expiresInMins) {
                 console.log("Generating")
