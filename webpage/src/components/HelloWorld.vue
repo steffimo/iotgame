@@ -1,16 +1,12 @@
 <template>
     <div class="hello">
         <h1>{{ msg }}</h1>
-        <p>
-            ShakeIT is a simple and fun Internet of Things game, used for the development of an IoT showcase in purpose
-            of a thesis.
-        </p>
         <p>Your current session is identified with <b>{{sessionID}}</b>.</p>
-        <p>First, create your username. Second, press the button "Go for IT". After pressing the button, explore your accelerometer data - but be ready to shake your
+        <p>So first, create your username.<br> Second, press the button "Go for IT". <br> After pressing the button, explore your smartphones accelerometer data - but be ready to shake your
             device for 10 seconds to win the game after starting the countdown ;)</p>
         <form id="login">
             <p>
-                <input id="username" v-model="username" placeholder="Create Your username here" :disabled='clicked'>
+                <input id="username" v-model="username" placeholder="Create Your username" :disabled='clicked'>
             </p>
             <div id="StartButton">
                 <button @click="startDataTransfer" :disabled='clicked'>Go for IT</button>
@@ -121,12 +117,8 @@
             },
             async createMQTTConnection() {
                 let mqtt = require("mqtt");
-                //let deviceID = "TestDeviceWeb";
                 let host = 'ShowcaseHub.azure-devices.net';
-                //let host = 'ShowcaseHubSM.azure-devices.net';
-                //Device Shared Access Key
-                //let sharedAccessKey = 'oGCxm9N23jyDtq9EC9LAoqR95PrSEg5uzwpXX9o6R0E=';
-                //let sharedAccessKey = 'ZYwl6LA2+OlxOKWOPqjhx1qDFR+2oNZFavQuQp/t1Ao=';
+                //let host = 'ShowcaseHubMW.azure-devices.net';
                 console.log("Ist da "+this.deviceID+" "+this.sharedAccessKey)
                 let sharedGeneratedKey = this.generateSAS(host + '/devices/' + this.deviceID, this.sharedAccessKey, null, 2);
                 this.topic = 'devices/' + this.deviceID + '/messages/events/';
@@ -170,7 +162,6 @@
                 this.client.publish(topic, message);
             },
             showTime() {
-                //never set on false again, user must reload page
                 setTimeout(() => {
                     window.removeEventListener('devicemotion', this.motion, true);
                     document.getElementById('timeover').style.display = "block";
