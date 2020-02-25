@@ -117,8 +117,8 @@
             },
             async createMQTTConnection() {
                 let mqtt = require("mqtt");
-                let host = 'ShowcaseHub.azure-devices.net';
-                //let host = 'ShowcaseHubMW.azure-devices.net';
+                //let host = 'ShowcaseHub.azure-devices.net';
+                let host = 'ShowcaseHubMW.azure-devices.net';
                 console.log("Ist da "+this.deviceID+" "+this.sharedAccessKey)
                 let sharedGeneratedKey = this.generateSAS(host + '/devices/' + this.deviceID, this.sharedAccessKey, null, 2);
                 this.topic = 'devices/' + this.deviceID + '/messages/events/';
