@@ -43,7 +43,7 @@
                 username: null,
                 sessionID: String,
                 lastMessageTime: 0,
-                timePeriod: 1000,
+                timePeriod: 500,
                 topic: String,
                 client: undefined,
                 over: false
