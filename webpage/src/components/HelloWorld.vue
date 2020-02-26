@@ -6,10 +6,10 @@
             device for 10 seconds to win the game after starting the countdown ;)</p>
         <form id="login">
             <p>
-                <input id="username" v-model="username" placeholder="Create Your username" :disabled='clicked'>
+                <input class="start" id="username" v-model="username" placeholder="Create Your username" :disabled='clicked'>
             </p>
             <div id="StartButton">
-                <button @click="startDataTransfer" :disabled='clicked'>Go for IT</button>
+                <button class="start" @click="startDataTransfer" :disabled='clicked'>Go for IT</button>
             </div>
         </form>
         <div class='output-info'>
@@ -19,7 +19,7 @@
                 <li class='z_axis'><b>z</b> {{zValue}}</li>
             </ul>
         </div>
-        <div id="timeover" style="display: none;">
+        <div id="timeover" v-if="over">
             <p>Time is over!</p>
         </div>
     </div>
@@ -45,7 +45,8 @@
                 lastMessageTime: 0,
                 timePeriod: 1000,
                 topic: String,
-                client: undefined
+                client: undefined,
+                over: false
             };
         },
         async created() {
@@ -164,10 +165,10 @@
             showTime() {
                 setTimeout(() => {
                     window.removeEventListener('devicemotion', this.motion, true);
-                    document.getElementById('timeover').style.display = "block";
+                    this.over = true;
                     this.releaseDevice();
                     this.client.end();
-                }, 30 * 1000);
+                }, 60 * 1000);
             },
             generateSAS(resourceUri, signingKey, policyName, expiresInMins) {
                 console.log("Generating")
@@ -204,5 +205,9 @@
 
     input {
         margin-left: 10px;
+    }
+
+    .start {
+        font-family: monospace;
     }
 </style>

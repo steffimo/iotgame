@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="">
+    <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="css for button and improved timeover">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/src/assets/logo.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpage/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/vue.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +142,7 @@
       <workItem from="1581321930340" duration="18417000" />
       <workItem from="1581792531559" duration="45042000" />
       <workItem from="1582397759335" duration="13095000" />
-      <workItem from="1582632767965" duration="5084000" />
+      <workItem from="1582632767965" duration="8743000" />
     </task>
     <task id="LOCAL-00001" summary="adaption simulated device for connection">
       <created>1577136378039</created>
@@ -375,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582645731512</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="active azure MW abo components">
+      <created>1582663790130</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1582663790130</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,7 +406,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/webpage" />
     </ignored-roots>
-    <MESSAGE value="microsoft code without changes added" />
     <MESSAGE value="first try to fit into vuejs" />
     <MESSAGE value="first try to fit into vuejs with updated dependencies (not working yet)" />
     <MESSAGE value="webpage: DeviceMotionEvent works now (https)" />
@@ -424,7 +430,8 @@
     <MESSAGE value="fixing url for resetting device" />
     <MESSAGE value="disable username field while playing+setting sending messages time to 30s" />
     <MESSAGE value="some css and copyright" />
-    <option name="LAST_COMMIT_MESSAGE" value="some css and copyright" />
+    <MESSAGE value="active azure MW abo components" />
+    <option name="LAST_COMMIT_MESSAGE" value="active azure MW abo components" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="72" key="#Custom_Plugin_Repositories" timestamp="1581594080618">
@@ -439,12 +446,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="72" key="#Plugins/0.0.1536.824@0.0.1536.824" timestamp="1581605199380" />
-    <state x="387" y="8" key="CommitChangelistDialog2" timestamp="1582645730875">
+    <state x="387" y="8" key="CommitChangelistDialog2" timestamp="1582710190517">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="387" y="8" key="CommitChangelistDialog2/0.0.1536.824/1920.-201.2560.1400@0.0.1536.824" timestamp="1582036217435" />
     <state x="387" y="8" key="CommitChangelistDialog2/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1582645730875" />
-    <state x="387" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582456471772" />
+    <state x="387" y="8" key="CommitChangelistDialog2/0.0.1536.824/1920.0.2560.1400@0.0.1536.824" timestamp="1582710190517" />
+    <state x="387" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582663789515" />
     <state x="93" y="93" width="1350" height="638" maximized="true" key="DiffContextDialog" timestamp="1581339295242">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -466,16 +474,20 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581862662485" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1582645732971">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1582663793323">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.-201.2560.1400@0.0.1536.824" timestamp="1582036229452" />
     <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1582645732971" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1582456476273" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1582663793323" />
     <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582239351282">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1582239351282" />
+    <state x="463" y="144" width="609" height="536" key="find.popup" timestamp="1582667848902">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="463" y="144" width="609" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1582667848902" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1581593862059">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
