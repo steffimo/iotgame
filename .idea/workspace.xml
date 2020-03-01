@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="css for button and improved timeover">
+    <list default="true" id="e53022b5-68a5-4d5d-96a9-30dc9f26903b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/webpage/public/hands.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpage/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpage/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/webpage/src/components/HelloWorld.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +144,9 @@
       <workItem from="1581321930340" duration="18417000" />
       <workItem from="1581792531559" duration="45042000" />
       <workItem from="1582397759335" duration="13095000" />
-      <workItem from="1582632767965" duration="9722000" />
+      <workItem from="1582632767965" duration="16608000" />
+      <workItem from="1582879263134" duration="599000" />
+      <workItem from="1582898299662" duration="691000" />
     </task>
     <task id="LOCAL-00001" summary="adaption simulated device for connection">
       <created>1577136378039</created>
@@ -389,7 +393,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582710312771</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="setting frequence to 0,5s">
+      <created>1582711305788</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1582711305788</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,7 +424,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/webpage" />
     </ignored-roots>
-    <MESSAGE value="first try to fit into vuejs with updated dependencies (not working yet)" />
     <MESSAGE value="webpage: DeviceMotionEvent works now (https)" />
     <MESSAGE value="new frame for the analysis webpage" />
     <MESSAGE value="10 seconds disabled button for webpage" />
@@ -438,7 +448,8 @@
     <MESSAGE value="some css and copyright" />
     <MESSAGE value="active azure MW abo components" />
     <MESSAGE value="css for button and improved timeover" />
-    <option name="LAST_COMMIT_MESSAGE" value="css for button and improved timeover" />
+    <MESSAGE value="setting frequence to 0,5s" />
+    <option name="LAST_COMMIT_MESSAGE" value="setting frequence to 0,5s" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="72" key="#Custom_Plugin_Repositories" timestamp="1581594080618">
@@ -453,12 +464,12 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="72" key="#Plugins/0.0.1536.824@0.0.1536.824" timestamp="1581605199380" />
-    <state x="387" y="8" key="CommitChangelistDialog2" timestamp="1582710311975">
+    <state x="387" y="8" key="CommitChangelistDialog2" timestamp="1582711304954">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="387" y="8" key="CommitChangelistDialog2/0.0.1536.824/1920.-201.2560.1400@0.0.1536.824" timestamp="1582036217435" />
     <state x="387" y="8" key="CommitChangelistDialog2/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1582645730875" />
-    <state x="387" y="8" key="CommitChangelistDialog2/0.0.1536.824/1920.0.2560.1400@0.0.1536.824" timestamp="1582710311975" />
+    <state x="387" y="8" key="CommitChangelistDialog2/0.0.1536.824/1920.0.2560.1400@0.0.1536.824" timestamp="1582711304954" />
     <state x="387" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582663789515" />
     <state x="93" y="93" width="1350" height="638" maximized="true" key="DiffContextDialog" timestamp="1581339295242">
       <screen x="0" y="0" width="1536" height="824" />
@@ -481,17 +492,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581862662485" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1582710317251">
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1582711308501">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.-201.2560.1400@0.0.1536.824" timestamp="1582036229452" />
     <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1582645732971" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.2560.1400@0.0.1536.824" timestamp="1582710317251" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.2560.1400@0.0.1536.824" timestamp="1582711308501" />
     <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1582663793323" />
-    <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582239351282">
+    <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583061515018">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1582239351282" />
+    <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1583061515018" />
     <state x="463" y="144" width="609" height="536" key="find.popup" timestamp="1582667848902">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

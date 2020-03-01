@@ -76,7 +76,7 @@
                 }
             },
             startDataTransfer() {
-                if (this.username == null | this.username == "") {
+                if (this.username == null | this.username === "") {
                     window.alert("No username!");
                     return;
                 }
@@ -110,7 +110,7 @@
                 this.xValue = Math.round(acc.x * 100) / 100;
                 this.yValue = Math.round(acc.y * 100) / 100;
                 this.zValue = Math.round(acc.z * 100) / 100;
-                if (this.lastMessageTime == 0 || this.lastMessageTime + this.timePeriod < currentTime) {
+                if (this.lastMessageTime === 0 || this.lastMessageTime + this.timePeriod < currentTime) {
                     console.log("New Message now on sending status")
                     this.sendMessage(this.topic);
                     this.lastMessageTime = Date.now();
