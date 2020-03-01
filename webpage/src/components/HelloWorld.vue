@@ -91,7 +91,7 @@
                     DeviceMotionEvent.requestPermission()
                         .then(permissionState => {
                             if (permissionState === 'granted') {
-                                window.addEventListener('devicemotion', this.motion, true);
+                                window.addEventListener('deviceorientation', this.motion, true);
                                 this.showTime();
                             }
                         })
