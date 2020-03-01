@@ -106,10 +106,14 @@
                 let currentTime = Date.now()
                 console.log('Engage');
                 console.log(e);
-                let acc = e.acceleration;
+                /*let acc = e.acceleration;
                 this.xValue = Math.round(acc.x * 100) / 100;
                 this.yValue = Math.round(acc.y * 100) / 100;
-                this.zValue = Math.round(acc.z * 100) / 100;
+                this.zValue = Math.round(acc.z * 100) / 100;*/
+                let rot = e.rotationRate;
+                this.xValue = rot.alpha;
+                this.yValue = rot.beta;
+                this.zValue = rot.gamma;
                 if (this.lastMessageTime === 0 || this.lastMessageTime + this.timePeriod < currentTime) {
                     console.log("New Message now on sending status")
                     this.sendMessage(this.topic);
