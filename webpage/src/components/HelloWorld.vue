@@ -99,7 +99,7 @@
                 } else {
                     // handle regular non iOS 13+ devices
                     this.showTime();
-                    window.addEventListener('devicemotion', this.motion, true);
+                    window.addEventListener('deviceorientation', this.motion, true);
                 }
             },
             motion(e) {
@@ -110,10 +110,10 @@
                 this.xValue = Math.round(acc.x * 100) / 100;
                 this.yValue = Math.round(acc.y * 100) / 100;
                 this.zValue = Math.round(acc.z * 100) / 100;*/
-                let rot = e.rotationRate;
-                this.xValue = rot.alpha;
-                this.yValue = rot.beta;
-                this.zValue = rot.gamma;
+                //let rot = e.rotationRate;
+                this.xValue = e.alpha;
+                this.yValue = e.beta;
+                this.zValue = e.gamma;
                 if (this.lastMessageTime === 0 || this.lastMessageTime + this.timePeriod < currentTime) {
                     console.log("New Message now on sending status")
                     this.sendMessage(this.topic);
