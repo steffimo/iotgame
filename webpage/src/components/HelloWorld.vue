@@ -91,7 +91,7 @@
                     DeviceMotionEvent.requestPermission()
                         .then(permissionState => {
                             if (permissionState === 'granted') {
-                                window.addEventListener('deviceorientation', this.motion, true);
+                                window.addEventListener('devicemotion', this.motion, true);
                                 this.showTime();
                             }
                         })
@@ -99,21 +99,17 @@
                 } else {
                     // handle regular non iOS 13+ devices
                     this.showTime();
-                    window.addEventListener('deviceorientation', this.motion, true);
+                    window.addEventListener('devicemotion', this.motion, true);
                 }
             },
             motion(e) {
                 let currentTime = Date.now()
                 console.log('Engage');
                 console.log(e);
-                /*let acc = e.acceleration;
+                let acc = e.acceleration;
                 this.xValue = Math.round(acc.x * 100) / 100;
                 this.yValue = Math.round(acc.y * 100) / 100;
-                this.zValue = Math.round(acc.z * 100) / 100;*/
-                //let rot = e.rotationRate;
-                this.xValue = e.alpha;
-                this.yValue = e.beta;
-                this.zValue = e.gamma;
+                this.zValue = Math.round(acc.z * 100) / 100;
                 if (this.lastMessageTime === 0 || this.lastMessageTime + this.timePeriod < currentTime) {
                     console.log("New Message now on sending status")
                     this.sendMessage(this.topic);
