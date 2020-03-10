@@ -43,7 +43,7 @@
                 username: null,
                 sessionID: String,
                 lastMessageTime: 0,
-                timePeriod: 500,
+                timePeriod: 200,
                 topic: String,
                 client: undefined,
                 over: false
@@ -118,7 +118,6 @@
             },
             async createMQTTConnection() {
                 let mqtt = require("mqtt");
-                //let host = 'ShowcaseHub.azure-devices.net';
                 let host = 'ShowcaseHubMW.azure-devices.net';
                 console.log("Ist da "+this.deviceID+" "+this.sharedAccessKey)
                 let sharedGeneratedKey = this.generateSAS(host + '/devices/' + this.deviceID, this.sharedAccessKey, null, 2);
