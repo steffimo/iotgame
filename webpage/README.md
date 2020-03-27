@@ -1,32 +1,44 @@
-# webpage
-[git](https://git-scm.com/download)
+---
+author: Stefanie Motzokan
+---
+# A simple internet of things showcase - user frontend
 
-used IDE: IntelliJ (Maven integrated) 
-+(Plugin für .vue)\
-Nice to have: [vue-devtools](https://github.com/vuejs/vue-devtools)
+## Requirements
 
+- used IDE: IntelliJ (Maven integrated) with Plugin for .vue\
+- [NodeJS and npm](https://www.npmjs.com/get-npm)
+- [git](https://git-scm.com/download)
+- nice to have: [vue-devtools](https://github.com/vuejs/vue-devtools)
+- maybe to have: [Azure IoT Explorer](https://github.com/Azure/azure-iot-explorer/releases)
 
-[NodeJS and npm](https://www.npmjs.com/get-npm)
-## Project setup
+## Preperations
+
+update vue.config.js and HelloWorld.vue to your Azure components
 ```
 npm install
 ```
-[Azure IoT Explorer](https://github.com/Azure/azure-iot-explorer/releases)
-
+## Running
 ### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Compiles and deploys to the GitHub Page
+Following could be used as a Shell-Skript to deploy
 ```
+# build
 npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
+# navigate into the build output directory
+cd dist
+
+git init
+git add -A
+git commit -m 'deploy'
+
+# you are deploying to https://<USERNAME>.github.io/<REPO>
+git push -f https://github.com/steffimo/iotgame.git master:gh-pages
 ```
 
 ### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+There's a GitHub Action for this repository reacting on pushing to the repository, so there will be a automatic build and deploy process for the GitHub Page
