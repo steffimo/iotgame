@@ -76,14 +76,14 @@
                 }
             },
             startDataTransfer() {
-                if (this.username == null | this.username === "") {
-                    window.alert("No username!");
-                    return;
+                if (this.username == null || this.username === "") {
+                  window.alert("No username!");
+                  return;
                 }
-                if (this.sessionID == null) {
-                    window.alert("No session! Scann again!");
-                    return;
-                }
+              if (this.sessionID == null) {
+                window.alert("No session! Scann again!");
+                return;
+              }
                 this.clicked = true;
                 //showTime erst nach der Permission ausführen, um gleiche Zeit/Anzahl der Nachrichten für iOS und Android
                 //requestPermission for iPhones, give permission manual
@@ -117,21 +117,24 @@
                 }
             },
             async createMQTTConnection() {
-                let mqtt = require("mqtt");
-                let host = 'ShowcaseHubMW.azure-devices.net';
-                console.log("Ist da "+this.deviceID+" "+this.sharedAccessKey)
-                let sharedGeneratedKey = this.generateSAS(host + '/devices/' + this.deviceID, this.sharedAccessKey, null, 2);
-                this.topic = 'devices/' + this.deviceID + '/messages/events/';
-                this.client = mqtt.connect({
-                    host: host,
-                    port: 443,
-                    path: '/$iothub/websocket?iothub-no-client-cert=true',
-                    protocol: 'mqtts',
-                    protocolId: 'MQTT',
-                    protocolVersion: 4,
-                    clientId: this.deviceID,
-                    username: host + '/' + this.deviceID + '/api-version=2018-06-30',
-                    password: sharedGeneratedKey,
+              const mqtt = require('mqtt');
+              console.log("MQTT " + mqtt);
+              let host = 'ShowcaseHubMW.azure-devices.net';
+              console.log("Ist da " + this.deviceID + " " + this.sharedAccessKey)
+              let sharedGeneratedKey = this.generateSAS(host + '/devices/' + this.deviceID, this.sharedAccessKey, null, 2);
+              console.log("Key " + sharedGeneratedKey);
+              this.topic = 'devices/' + this.deviceID + '/messages/events/';
+              console.log("Topic " + this.topic);
+              this.client = mqtt.connect({
+                host: host,
+                port: 443,
+                path: '/$iothub/websocket?iothub-no-client-cert=true',
+                protocol: 'mqtts',
+                protocolId: 'MQTT',
+                protocolVersion: 4,
+                clientId: this.deviceID,
+                username: host + '/' + this.deviceID + '/api-version=2018-06-30',
+                password: sharedGeneratedKey,
                     keepalive: 30000
                 });
                 this.client.on('connect', function (packet) {
