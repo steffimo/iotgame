@@ -1,10 +1,10 @@
 const API_URL = {
     production: JSON.stringify('https://iotShowcaseFunctions.azurewebsites.net'),
-    development: JSON.stringify('https://172.27.50.74:8081')
+    development: JSON.stringify('https://localhost:8081')
 };
 
 // check environment mode
-const environment = process.env.NODE_ENV === 'production' ? 'production' : 'development';
+const environment = process.env.NODE_ENV === 'production' ? 'production' : 'production';
 module.exports = {
     publicPath: '/iotgame/',
     devServer: {

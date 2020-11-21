@@ -122,7 +122,6 @@
               let host = 'ShowcaseHubMW.azure-devices.net';
               console.log("Ist da " + this.deviceID + " " + this.sharedAccessKey)
               let sharedGeneratedKey = this.generateSAS(host + '/devices/' + this.deviceID, this.sharedAccessKey, null, 2);
-              console.log("Key " + sharedGeneratedKey);
               this.topic = 'devices/' + this.deviceID + '/messages/events/';
               console.log("Topic " + this.topic);
               this.client = mqtt.connect({
